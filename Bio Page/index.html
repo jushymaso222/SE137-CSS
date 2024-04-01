@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W2 Bio Page</title>
+    <meta name="author" content="Josh">
+    <meta name="description" content="W2 Bio Page">
+</head>
+<body>
+    
+    <!--Start header-->
+    <div id="header">
+        <h1 style="display:inline-block;">Joshua Mason - About Me</h1>
+    </div>
+
+    <div id="nav">
+        <!--Swapped out links for buttons (purely for aesthetics)-->
+        <button onclick="window.location.href='#';" class="button">Bio</button>
+        <button onclick="window.location.href='#';" class="button">Schooling</button>
+        <button onclick="window.location.href='#';" class="button">Hobbies</button>
+    </div>
+
+    <hr>
+
+    <!--Start Bio Div [the profile icon is outside of the div just for centering sake with css, couldn't find out how to get it to work in the div without messing with everything else in it]-->
+    <img src="images/icon.jpg" alt="Profile Icon" class="profile">
+    <div id="bio" class="section">
+        <h2 id="bio" class="centertext">Bio</h2> <!--'centertext' class just applies text-align to the elements-->
+            <p class="centertext">Hi, my name is Joshua! I am a software engineer and an avid video game enthusiast. I am 20 years old and have lived in Warwick, RI my whole life. I originally wanted to become an aerospace engineer, focusing on the field of space travel, but have since decided to alter my path and become a software engineer instead. I originally got into software from <em>Minecraft</em> in a mod called ComputerCraft. The mod allows you to make your own programs in LUA and since there were so many possibilities for it within the game, it quickly became my jumping off point for computer science.</p>
+        <hr>
+    </div>
+
+    <!--Start School Div-->
+    <div id="school" class="section hide">
+        <h2 id="bigtitle">Schooling</h2> <!--'bigtitle' class for accentuated titles-->
+        <p class="centertext">My schooling was crazy and I've been to many different places. Here's how it went, and I'll break it down in a bit cause there's a lot to unpack.</p>
+        <ol> 
+            <li>Wyman Elementary School</li>
+            <li>Aldrich High School</li>
+            <li>Vets Memorial Middle School</li>
+            <li>Pilgrim High School</li>
+            <li>University of Rhode Island</li>
+            <li>Community College of Rhode Island</li>
+            <li>New England Institute of Technology</li>
+        </ol>
+        <!--multiple paragraphs to add space between a large block of text without breaks-->
+        <p class="centertext">So it started off with elementary school <strong>obviously</strong> which went smoothly. I loved Wyman, I always had great teachers, the school wasn't too big, and it got me into a lot of the hobbies, and friend groups, that I am still in today. From there on out though things got weird.<p>
+        <p class="centertext">I went to Aldrich for my 7th grade ONLY because they decided to close the school the year after I got there. Around this time, they had recently converted Vets Memorial High School into a new middle school. So my last year of middle school was <em>ALL</em> the way over there. I did some fun things there though, that was my first time ever going to Six Flags and a proper roller coaster. Then came high school which again went fine.<p>
+        <p class="centertext">After high school I decided to go to URI for a few years before deciding that it wasn't the right fit for me. Then I was in CCRI, albeit for a very short time, as this was just for cataching up at URI (which I wasn't continuing anyway) so then I brought myself to NEIT. Now here I am as a software engineer! It's been quite the journey!</p>
+    </div>
+
+    <!--Start Hobbies Div-->
+    <div id="hobbies" class="section hide">
+        <h2 id="bigtitle">Hobbies</h2>
+        <p class="centertext">SPOILER ALERT: I have some serious ADHD so I happen to have a LOT of hobbies. Probably my biggest obsession is video games... I'm on them way more often than I'd like to admit. However, I also like to make music, draw (occassionally), spend time outdoors, hang out with friends, code <i>clearly</i>, and so many other smaller hobbies that I don't focus on as often. Here's a couple of the games I have been stuck on recently:</p>
+        <ul> <!--Added links to all of the games in my list for quick access for people to delve further if wanted-->
+            <li><a href="https://diablo4.blizzard.com/en-us/?gclid=Cj0KCQjwoK2mBhDzARIsADGbjeqDcJPv1Dc-SDC11dWx2_PYphTapQEwBdrGCVS-XswXZ-KB0zH_N1waAlHGEALw_wcB" target="_blank">Diablo IV</a></li>
+            <li><a href="https://store.steampowered.com/app/1282100/Remnant_II/" target="_blank">Remnant 2</a></li>
+            <li><a href="https://store.steampowered.com/app/1614550/Astro_Colony/" target="_blank">Astro Colony</a></li>
+            <li><a href="https://store.steampowered.com/app/1061910/Metal_Hellsinger/" target="_blank">Metal: Hellsinger</a></li>
+            <li><a href="https://store.steampowered.com/app/1135230/Ember_Knights/" target="_blank">Ember Knights</a></li>
+        </ul>
+        <img src="images/diablo4-logo.png" alt="Logo of Diablo IV" id="center">
+    </div>
+
+
+    <!--Start Footer Div-->
+    <div id="footer">
+        <h3 style="display:inline-block;">&copy;J Mason | SE111.02 | 202340</h3>
+        <h3 style="display:inline-block; margin-left:50px;"><a href="#header">Back to TOP</a></h3>
+    </div>
+
+
+    <script>
+        var a = Array.from(document.querySelectorAll(`button`));
+        var div = document.querySelectorAll(`.section`)
+        console.log(div);
+
+        for (let i = 0; i < a.length; i++) {
+            a[i].addEventListener(`click`, press);
+        }
+
+        function press(e) {
+            e.preventDefault()
+            let p = a.indexOf(e.target)
+
+            for (let i = 0; i < a.length; i++) {
+                div[i].classList.add("hide");
+            }
+
+            div[p].classList.remove("hide");
+            
+        }
+    </script>
+
+</body>
+</html>

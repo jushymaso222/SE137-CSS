@@ -1,0 +1,172 @@
+body {
+    margin: 0px;
+    background-color: rgb(40, 40, 40);
+}
+
+#header {
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+    height: 100px;
+    width: 100%;
+
+}
+
+
+h1 {
+    margin: 0px;
+    color: rgb(187, 9, 8);
+    font-family: 'Teko';
+    vertical-align: bottom;
+    font-weight: 300;
+    font-size: 48px;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+#banner {
+    width: 1440px;
+    height: 388px;
+    object-fit: cover;
+}
+
+#sidebar {
+    width: 400px;
+    background-color: rgb(60, 60, 60);
+}
+
+#underwater {
+    width: 325px;
+    margin: 0px 40px 20px 40px;
+}
+
+#movie {
+    background-color: rgb(60, 60, 60);
+    margin: 10px;
+    border-top: 5px solid rgb(187,9,8);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#poster {
+    width: 310px;
+}
+
+#sign {
+    width: 380px;
+    height: 320px;
+    object-fit: inherit;
+    margin: 0px 12px 0px 12px;
+}
+
+b {
+    color: rgb(187, 9, 8);
+}
+
+#dates {
+    margin: 0px 40px 40px 20px;
+}
+
+h2 {
+    color: rgb(187,9,8);
+    font-family: 'Rock Salt';
+    font-size: 20px;
+}
+
+.right-column {
+    margin: 2px;
+}
+
+.left-column {
+    margin: 2px;
+}
+
+.t18px {
+    font-size: 18px;
+    color: white;
+    font-family: 'Poppins';
+}
+
+.t24px {
+    font-size: 24px;
+    color: white;
+    font-family: 'Poppins';
+    margin-left: 5px;
+}
+
+a {
+    font-family: 'Poppins';
+    font-size: 14px;
+    color: turquoise;
+    vertical-align: top;
+}
+
+#price {
+    font-size: 50px;
+    color: white;
+    font-family: 'Teko';
+    font-weight: 700px;
+    vertical-align: bottom;
+}
+
+#ad {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+}  
+
+#flag {
+    background-color: rgb(60, 60, 60);
+    margin: 10px 0px 10px 0px;
+    border-top: 5px solid rgb(187,9,8);
+}
+
+#pennant {
+    width: 700px;
+    margin: 20px;
+}
+
+.margin {
+    margin: 20px;
+}
+
+#modules {
+    width: 1440px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#dvd {
+    width: 117px;
+}
+
+#wrapper {
+    display: flex;
+}
+
+#content {
+    flex: 1;
+}
+
+#footer {
+    margin: 0px;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+
+.tfoot {
+    padding-left: 20px;
+    margin: 0px; 
+    line-height: 100px;
+    font-size: 15px;
+    font-family: 'Poppins';
+    color: white;
+    vertical-align: middle;
+}
+
+hr {
+    border: 2px solid rgb(187, 9, 8);
+    margin: 20px 20px 0px 0px;
+}
+

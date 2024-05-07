@@ -1,7 +1,274 @@
-* {
-    box-sizing: border-box;
+@charset "UTF-8";
+
+html{
+    height:100%;
+}
+body{
+    height:100%;
+    margin:0;
+}
+main{
+    height:100%;
+    background-color:black;
+    display:flex;
+    flex-direction: column;
+}
+header{
+    height:23px;
+    background-color:rgb(80,80,80);
+    align-items: center;
+    vertical-align: center;
+    display: flex;
+    justify-content: space-between;
+    color: #d0cfcf;
+    font-family: 'Roboto';
+}
+section{
+    background-color:lime;
+    height:100%;
+    display:flex;
 }
 
-html {
+.nav-bar-links {
+    padding-left: 40px;
+    width: 144px;
+    justify-content: space-between;
+}
+
+.nav-bar-links a{
+    color: #d0cfcf;
+}
+
+.nav-bar-links a:hover{
+    color: #ffffff;
+}
+
+aside{
+    background-color:rgb(80,80,80);
+    width:45px;
     height: 100%;
 }
+
+#tray-button {
+    width: 45px;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="%23e3e3e3" d="M121 32C91.6 32 66 52 58.9 80.5L1.9 308.4C.6 313.5 0 318.7 0 323.9V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V323.9c0-5.2-.6-10.4-1.9-15.5l-57-227.9C446 52 420.4 32 391 32H121zm0 64H391l48 192H387.8c-12.1 0-23.2 6.8-28.6 17.7l-14.3 28.6c-5.4 10.8-16.5 17.7-28.6 17.7H195.8c-12.1 0-23.2-6.8-28.6-17.7l-14.3-28.6c-5.4-10.8-16.5-17.7-28.6-17.7H73L121 96z"/></svg>');
+    background-position: center;
+    background-color: rgb(80,80,80);
+    background-repeat: no-repeat;
+}
+
+.tray{
+    width:144px;
+    min-width:144px;
+    background-color:rgb(55,55,55);
+    transition:all 1s;
+    color:white;
+    display:flex;
+    justify-content: flex-end;
+    overflow: hidden;
+   
+}
+div.tray div{
+    min-width:144px;
+    box-sizing: border-box;
+}
+.hide{
+    width:0;
+    min-width:0;
+    transition:all 1s;
+}
+
+.down-arrow {
+    width: 13px;
+    height: 16px;
+    padding: 5px;
+}
+
+details[open] {
+    animation: sweep .5s ease-in-out;
+  }
+
+details:nth-child(1) {
+    border-bottom: none;
+}
+
+details > summary {
+    width: 100%;
+    border: none;   
+    border-top: 2px solid rgb(123, 117, 117);
+    height: 3em;
+    font-family: 'Roboto';
+    align-items: center;
+    justify-content: left;
+    display: flex;
+    color: white;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+details:nth-child(2) > summary {
+    border-bottom: 2px solid rgb(123, 117, 117);
+}
+
+details:nth-child(1) .activeTab {
+    border-bottom: 2px solid rgb(123, 117, 117);;
+}
+
+details > ul {
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="13px" height="13px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="%23d0cfcf" d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"/></svg>');
+    font-family: 'Roboto';
+    font-size: 12px;
+    color: #d0cfcf;
+}
+
+#tiles-icon {
+    width: 100%;
+    padding-top: 20px;
+}
+
+#trash-can {
+    width: 80%;
+    margin-top: calc(100% * 16.2);
+    align-items: center;
+    margin-left: 5px;
+}
+
+.other-stuff {
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="13px" height="13px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="%23d0cfcf" d="M153.6 29.9l16-21.3C173.6 3.2 180 0 186.7 0C198.4 0 208 9.6 208 21.3V43.5c0 13.1 5.4 25.7 14.9 34.7L307.6 159C356.4 205.6 384 270.2 384 337.7C384 434 306 512 209.7 512H192C86 512 0 426 0 320v-3.8c0-48.8 19.4-95.6 53.9-130.1l3.5-3.5c4.2-4.2 10-6.6 16-6.6C85.9 176 96 186.1 96 198.6V288c0 35.3 28.7 64 64 64s64-28.7 64-64v-3.9c0-18-7.2-35.3-19.9-48l-38.6-38.6c-24-24-37.5-56.7-37.5-90.7c0-27.7 9-54.8 25.6-76.9z"/></svg>');
+}
+
+.other-stuff-file:hover {
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="13px" height="13px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="%23ffffff" d="M153.6 29.9l16-21.3C173.6 3.2 180 0 186.7 0C198.4 0 208 9.6 208 21.3V43.5c0 13.1 5.4 25.7 14.9 34.7L307.6 159C356.4 205.6 384 270.2 384 337.7C384 434 306 512 209.7 512H192C86 512 0 426 0 320v-3.8c0-48.8 19.4-95.6 53.9-130.1l3.5-3.5c4.2-4.2 10-6.6 16-6.6C85.9 176 96 186.1 96 198.6V288c0 35.3 28.7 64 64 64s64-28.7 64-64v-3.9c0-18-7.2-35.3-19.9-48l-38.6-38.6c-24-24-37.5-56.7-37.5-90.7c0-27.7 9-54.8 25.6-76.9z"/></svg>');
+    font-family: 'Roboto';
+    font-size: 12px;
+    color: #ffffff;
+}
+
+li {
+    padding-bottom: 10px;
+}
+
+.files:hover {
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="13px" height="13px"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="%23ffffff" d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z"/></svg>');
+    font-family: 'Roboto';
+    font-size: 12px;
+    color: #ffffff;
+}
+
+
+/* summary::-webkit-details-marker {
+    display: none;
+} */
+
+#program{
+    background-color:#060606;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+}
+nav{
+    height:34px;
+    display:flex;
+}
+button{
+    width:173px;
+    background-color:rgb(55,55,55);
+    color: #d0cfcf;
+    border-radius: 0;
+    border:0 solid #161616;
+    margin-right:2px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 12px;
+    height: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+button:hover {
+    color: white;
+}
+
+.tab-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.x-button {
+    width: 16px;
+    height: 100%;
+    margin-left: auto;
+}
+
+button.active{
+    background-color:rgb(22,22,22);
+}
+button:last-child{
+    margin:0;
+}
+#breadcrumbs{
+    background-color:rgb(22,22,22);
+    color: #d0cfcf;
+    font-family: 'Roboto';
+    font-size: 12px;
+    display: flex;
+    height:23px;
+    align-items: center;
+    justify-content: left;
+    padding-left: 5px;
+}
+
+.settings-icon {
+    height: 16px;
+    width: 16px;
+    padding-right: 10px;
+}
+
+a:visited {
+    color: rgb(0,88,169)
+}
+
+a {
+    padding: 5px;
+    color: rgb(0,88,169)
+}
+
+a:hover {
+    color: rgb(25, 116, 202)
+}
+
+a:active {
+    color: rgb(131, 25, 202)
+}
+textarea{
+    box-sizing: border-box;
+    width:100%;
+    height:100%;
+    background-color:#060606;
+    border:0 solid #060606;
+    resize: none;
+    color:#ffffff;
+    outline:none;
+    overflow-y:auto;
+}
+footer{
+    height:16px;
+    background-color:#0254A0;
+    font-family: 'Roboto';
+    color: #d0cfcf;
+    font-size: 10px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#signal-icon {
+    height:100%;
+    padding-right: 5px;
+}
+

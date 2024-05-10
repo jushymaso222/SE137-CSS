@@ -86,9 +86,10 @@ div.tray div{
 
 details {
     transition: height 1s ease;
+    overflow: hidden;
 }
-details:not([open]) { height: 2.5em; }
-details[open] { height: 160px; }
+details:not([open]) { transition: all 1s ease-in-out; height: 2.5em; }
+details[open] { transition: all 1s ease-in-out; height: 160px; }
 
 details:nth-child(1) {
     border-bottom: none;

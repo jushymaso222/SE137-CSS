@@ -250,5 +250,6 @@ body {
 
     #logo {
         width: 80px;
+        position: relative;
     }
 }

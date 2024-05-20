@@ -244,8 +244,11 @@ body {
         margin-left: 40px;
     }
 
-    #logo {
-        
+    #left-module-text {
+        text-align: center;
     }
 
+    #logo {
+        width: 80px;
+    }
 }

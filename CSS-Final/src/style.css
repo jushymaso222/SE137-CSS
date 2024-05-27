@@ -213,8 +213,8 @@ body {
 .slide-image {
     width: 900px;
     height: 400px;
-    object-fit: fit;
-    object-position: left;
+    object-fit: none;
+    object-position: center;
 }
 
 #click-me {

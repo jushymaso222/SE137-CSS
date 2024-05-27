@@ -35,7 +35,8 @@ p {
 
 #logo {
     width: 120px;
-    position: absolute;
+    position: fixed;
+    transform: translateY(0%);
 }
 
 #logo:hover {
@@ -167,6 +168,16 @@ body {
     padding-left: 60px;
     padding-right: 60px;
     box-sizing: border-box;
+    padding-top: 20px;
+}
+
+.white-bold {
+    color: white;
+    font-weight: 500;
+}
+
+#card-text {
+    color: black;
 }
 
 #module-left {
@@ -188,6 +199,19 @@ body {
 #module-right {
     background-color: #5F6164;
     border-radius: 32px;
+}
+
+.card-img-top {
+    width: 287px;
+    height: 180px;
+}
+
+.card-text {
+    color: black; 
+}
+
+.card {
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 1050px) {
@@ -250,6 +274,5 @@ body {
 
     #logo {
         width: 80px;
-        position: fixed;
     }
 }

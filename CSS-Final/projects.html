@@ -12,10 +12,6 @@
     <img id="logo" src=".\images\Logo.png" alt="Logo" onClick="location.href='index.html'">
     <div class="container-fluid">
         <nav id="nav" class="row align-items-center justify-content-between">
-            <div class="col-auto">
-                
-            </div>
-
             <div class="offset-1 col-4 menu">
                 <div id="links">
                     <a href="about.html">About Me</a>
@@ -25,7 +21,7 @@
             </div>
 
             <div class="offset-2 col-2 menu-button">
-                <div class="dropdown">
+                <div id="dropdown-menu" class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Menu
                     </button>
@@ -50,14 +46,66 @@
         </nav>
     </div>
 
-    <div id="content">
-        
+    <div id="content" class="row align-items-center justify-content-between">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
     </div>
 
     <div id="footer">
         <p id="copy">&copyJoshua Mason 2024</p>
         <a id="proto" target="_blank" href="https://pixso.net/app/editor/_bGIRrgZUo2Vm5iJnVEflw?icon_type=1&page-id=0%3A1">Pixso Design Prototype</a>
-        <div id="links" class="linksbot">
+        <div id="linksbot">
             <a href="about.html">About Me</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
@@ -68,23 +116,15 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script>
-    window.addEventListener('scroll', function() {
-    var nav = document.getElementById('nav');
+    document.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
     var logo = document.getElementById('logo');
-    var scrollTop = window.scrollY;
 
-    // Check if user has scrolled past the top of the navbar
-    if (scrollTop > nav.offsetTop) {
-        // Make the navbar fixed
-        nav.classList.add('fixed');
-        // Move the logo inside the fixed navbar
-        logo.style.top = '0px'; // Adjust the top position as needed
-    } else {
-        // Make the navbar static
-        nav.classList.remove('fixed');
-        // Reset the logo position
-        logo.style.top = '';
-    }
+    // Adjust the logo's position to move opposite to the scroll direction
+    // You can modify the multiplier to control the speed of the movement
+    var offset = -scrollPosition * 0.5; // Adjust 0.5 to control the speed
+
+    logo.style.transform = `translateY(${offset}px)`;
     });
   </script>
 </body>

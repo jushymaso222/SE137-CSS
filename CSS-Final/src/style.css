@@ -202,8 +202,24 @@ body {
 }
 
 .card-img-top {
-    width: 287px;
-    height: 180px;
+    padding-top: 15px;
+    width: 260px;
+    height: 300px;
+    object-fit: none;
+    object-position: left;
+    overflow: hidden;
+}
+
+.slide-image {
+    width: 900px;
+    height: 400px;
+    object-fit: fit;
+    object-position: left;
+}
+
+#click-me {
+    color: rgb(192, 192, 192);
+    font-size: 12pt;
 }
 
 .card-text {
